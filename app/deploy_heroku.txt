@@ -1,0 +1,7 @@
+$ heroku login
+heroku create hotelfinderapp --buildpack heroku/python
+$ git init
+git add .
+git commit -m "Flask-Restful-Heroku api"
+heroku git:remote -a hotelfinderapp
+git push heroku master
