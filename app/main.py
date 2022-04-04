@@ -13,7 +13,6 @@ from mongo_db import MongoDB_Push
 
 app = Flask(__name__)
 app.config['MONGO_URI'] = "mongodb+srv://lasheralberto:economiaUm94@cluster0.ov3vg.mongodb.net/test?authSource=admin&replicaSet=atlas-d1rt3z-shard-0&readPreference=primary&appname=MongoDB+Compass&ssl=true"
-#"mongodb+srv://lasheralberto:economiaUm94@cluster0.ov3vg.mongodb.net/mongodbhotels?retryWrites=true&w=majority"
 
 mongo = PyMongo(app)
 api = Api(app)
@@ -21,8 +20,8 @@ CORS(app)
 client = pymongo.MongoClient(app.config['MONGO_URI'], connect= True)
 db = client.mongodbhotels
 
-db_push = MongoDB_Push( cliente= client )
-db_push.mongodb_pushdata_db( )
+#db_push = MongoDB_Push( cliente= client )
+#db_push.mongodb_pushdata_db( )
 
 
 class HotelList(Resource):
@@ -54,3 +53,5 @@ api.add_resource(Hotel, '/<string:cityname>')
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+#hotelfinder = app

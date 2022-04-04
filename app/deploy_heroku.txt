@@ -1,5 +1,7 @@
+para borrar repositorio: rmdir /s /q .git
 $ heroku login
 heroku create hotelfinderapp --buildpack heroku/python
+heroku git:remote -a hotelfinderapp
 $ git init
 git add .
 git commit -m "Flask-Restful-Heroku api"
