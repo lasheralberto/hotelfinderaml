@@ -7,3 +7,7 @@ git add .
 git commit -m "Flask-Restful-Heroku api"
 heroku git:remote -a hotelfinderapp
 git push heroku master
+
+for github:
+git add
+git commit
